@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:orientation="vertical">
-
+  android:orientation="vertical"
+    >
   <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -12,13 +12,20 @@
       android:id="@+id/placeImage"
       android:layout_width="match_parent"
       android:layout_height="220dp"
-      android:scaleType="centerCrop" />
+      android:scaleType="centerCrop"
+        android:transitionName="tImage"
+
+        />
 
     <LinearLayout
       android:id="@+id/revealView"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:background="#95000000">
+      android:background="#95000000"
+        android:transitionName="tNameHolder"
+        android:orientation="horizontal"
+
+        >
 
       <EditText
         android:id="@+id/todoText"
@@ -27,7 +34,10 @@
         android:layout_gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+
+          />
+      <include layout="@layout/toolbar_detail"/>
 
     </LinearLayout>
 
@@ -63,7 +73,9 @@
       android:layout_marginEnd="10dp"
       android:layout_marginTop="28dp"
       android:elevation="@dimen/button_elevation"
-      android:src="@drawable/icn_add" />
+      android:src="@drawable/icn_add"
+        android:alpha="0.0"
+        />
 
   </FrameLayout>
 
